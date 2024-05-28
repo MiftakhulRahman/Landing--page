@@ -1,3 +1,8 @@
+:root {
+    --primary: #FF204E;
+    --kedua: #F1F1F1;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +20,12 @@ body {
 .container {
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
 }
 
 header {
-    background-color: #FFBF00;
-    color: #151515;
+    background-color: var(--primary);
+    color: var(--kedua);
     text-align: center;
     font-size: 0.8rem;
     height: 70px;
@@ -28,7 +33,7 @@ header {
 }
 
 nav {
-    background-color: #151515;
+    background-color: var(--kedua);
     padding-left: 20px;
 }
 
@@ -47,16 +52,16 @@ nav ul li {
 
 nav ul li a {
     font-size: 1rem;
-    color: #FFBF00;
+    color: var(--primary);
     font-weight: 600;
     transition: .2s ease-in;
 }
 
 nav ul li:hover {
-    background-color: #FFBF00;
+    background-color: var(--primary);
 }
 
-nav ul li a:hover {
+nav ul li:hover a {
     color: white;
 }
 
@@ -91,6 +96,14 @@ main article .isi-artikel {
     background-color: white;
     border: 1px solid rgba(0, 0, 0, .3);
     border-radius: 5px;
+    font-size: 1rem;
+    transition: .2s ease-in;
+}
+
+.isi-artikel button:hover {
+    background-color: var(--primary);
+    color: var(--kedua);
+    border: 1px solid var(--primary)
 }
 
 main aside {
@@ -112,12 +125,40 @@ aside ul li a{
 }
 
 footer {
-    background-color: #FFBF00;
-    color: #151515;
+    background-color: var(--primary);
+    color: var(--kedua);
     text-align: center;
     font-size: 0.8rem;
     height: 40px;
     line-height: 40px;
     font-weight: 500;
     font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+
+    header {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    aside ul li a{
+        font-size: 0.9readdm;
+    }
+
+    aside h4 {
+        font-size: 0.8rem;
+    }
+    
+    footer {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    main {
+        gap: 15px;
+    }
 }
